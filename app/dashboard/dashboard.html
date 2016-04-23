@@ -1,0 +1,27 @@
+<h1>Dashboard</h1>
+<div ng-controller="dashboardCtrl">
+	<form name="searchform" ng-submit="search()" class="form form-horizontal">
+		<div class="form-group col-xs-10 col-md-6">
+			<input type="text" ng-model="name" class="form-control col-xs-12" placeholder="Name" />
+		</div>
+		<div class="col-xs-2 col-md-2">
+			<button type="submit" class="btn btn-default">Search</button>
+		</div>
+	</form>
+
+	<table class="table table-striped">
+		<tbody>
+			<tr ng-repeat="item in searchResults">
+				<td>
+					<a href="#/profile/{{item.id}}">{{ item.FirstName }}</a>
+				</td>
+				<td>
+					{{ item.LastName }}
+				</td>
+				<td>
+					{{ item.BusinessUnit }}
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

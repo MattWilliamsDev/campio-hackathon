@@ -1,0 +1,15 @@
+<form ng-submit="auth()" ng-controller="loginCtrl" class="form form-horizontal col-xs-12 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
+	<h2>Login</h2>
+	<p>{{error}}</p>
+	<div class='form-group'>
+		<div class="col-xs-12">
+			<input type="text" class="form-control" ng-model="username" name="username" placeholder="Username">
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="col-xs-12">
+			<input type="password" class="form-control" ng-model="password" name="password" placeholder="Password">
+		</div>	
+	</div>
+	<input type="submit" value="Login" class="btn btn-default">
+</form>

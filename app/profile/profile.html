@@ -1,0 +1,66 @@
+<div class="row">
+	<div class="col-md-8 col-md-offset-2">
+
+		<h2>Profile</h2>
+
+		<div class="row">
+			<div class="col-md-12 profile-content">
+
+				<form name="profileForm" ng-controller="profileCtrl" class="form-horizontal">
+					<div class="form-group">
+						<label for="firstName" class="col-sm-3 control-label">First Name</label>
+						<div class="col-md-9">
+							<p class="form-control-static">{{ user.FirstName }}</p>
+							<!-- <input type="text" class="form-control" name="firstName" id="firstName" placeholder="First Name" ng-model="user.FirstName" ng-required> -->
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="lastName" class="col-sm-3 control-label">Last Name</label>
+						<div class="col-md-9">
+							<p class="form-control-static">{{ user.LastName }}</p>
+							<!-- <input type="text" class="form-control" name="lastName" id="lastName" placeholder="Last Name" ng-model="user.LastName" ng-required> -->
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="businessUnit" class="col-sm-3 control-label">Business Unit</label>
+						<div class="col-md-9">
+							<p class="form-control-static">{{ user.BusinessUnit }}</p>
+							<!-- <input type="text" class="form-control" name="businessUnit" id="businessUnit" placeholder="Business Unit" ng-model="user.BusinessUnit" ng-required> -->
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="skills" class="col-sm-3 control-label">Skills</label>
+						<div class="col-md-9">
+							<div
+								isteven-multi-select
+								input-model="skillsList"
+								output-model="skills"
+								button-label="Name"
+								item-label="Name"
+								tick-property="ticked"
+								orientation="vertical"
+								on-close="updateSkills()"
+							>
+							</div>
+							<!-- <ul class="skills">
+								<li ng-repeat="skill in skills">
+									<div class="row">
+										<div class="col-sm-3">{{ skill.Name }}</div>
+										<div class="col-sm-9">Endorsements Here!</div>
+									</div>
+								</li>
+							</ul> -->
+
+							<!-- <select multiple type="text" class="form-control" name="skills" id="skills" placeholder="Skills" ng-model="user.Skills"> -->
+						</div>
+					</div>
+				</form>
+
+			</div>
+		</div>
+
+	</div>
+</div>
